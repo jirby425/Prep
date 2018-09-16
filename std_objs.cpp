@@ -10,7 +10,7 @@
 
 using namespace std;
 
-void array (int size){
+void arrayExample (int size){
 	int arr [size];
 	for (int i =0; i < size; i++)
 		arr[i] = i;
@@ -25,8 +25,8 @@ void vectorExample (int size){
 	for (int i = 0; i < size; i++)
 		vec.push_back(i);
 
-	for(int i = 0; i < size; i++)
-		cout << vec.at(i) << " ";
+	for(auto& i : vec)
+		cout << i << " ";
 
 	cout << endl;
 }
@@ -36,18 +36,20 @@ void dequeExample (int size){
 	for(int i = 0; i < size; i++)
 		deq.push_back(i);
 	
-	for(int i = 0; i < size; i++)
-		cout << deq.at(i) << " ";
+	for(auto& i : deq)
+		cout << i << " ";
+
+	deq.clear();
 	
-	cout << endl;
+	cout << "\n";
 
 	for (int i = 0; i < size; i++)
 		deq.push_front(i);
 
-	for (int i = 0; i < size; i++)
-		cout << deq.at(i) << " ";	
+	for (auto& i : deq)
+		cout << i << " ";	
 
-	cout << endl;
+	cout << "\n";
 }
 
 void listExample (int size){
@@ -57,18 +59,19 @@ void listExample (int size){
 }
 
 void mapExample (int size){
-	map<string, int> m;
-	
+	map<string, int> m = {{"hello", 1}, {"i'm", 2}, {"jackson", 3}};
+	for(auto& x: m)
+		cout << x.first << ": " << x.second << endl;
 }
 
 
 int main(){
 	
 	cout << "hello world" <<endl;
-	array(4);
+	arrayExample(4);
 	vectorExample(5);
-	dequeExample(5);
-	listExample(4);
+	dequeExample(6);
+	mapExample(2);
 	return 0;
 
 }
