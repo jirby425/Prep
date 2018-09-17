@@ -35,19 +35,19 @@ void dequeExample (int size){
 	deque<int> deq;
 	for(int i = 0; i < size; i++)
 		deq.push_back(i);
-	
+
 	for(auto& i : deq)
 		cout << i << " ";
 
 	deq.clear();
-	
+
 	cout << "\n";
 
 	for (int i = 0; i < size; i++)
 		deq.push_front(i);
 
 	for (auto& i : deq)
-		cout << i << " ";	
+		cout << i << " ";
 
 	cout << "\n";
 }
@@ -60,7 +60,7 @@ void listExample (int size){
 
 void mapExample (int size){
 	map<string, int> m = {{"hello", 1}, {"i'm", 2}, {"jackson", 3}};
-	
+
 	for(auto& x: m)
 		cout << x.first << ": " << x.second << endl;
 
@@ -69,7 +69,7 @@ void mapExample (int size){
 
 
 int main(){
-	
+
 	cout << "hello world" <<endl;
 	arrayExample(4);
 	vectorExample(5);
