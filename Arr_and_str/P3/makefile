@@ -1,5 +1,5 @@
 cpp:
-	g++ -std=c++0x std_objs.cpp
+	g++ -std=c++0x P3.cpp
 	./a.out
 
 java:
