@@ -13,25 +13,35 @@ def minimumSwaps(arr):
     swaps = 0
     i = 0
     while i < n:
-        if arr[i] == i + 1:
+        if int(arr[i]) == i + 1:
             i += 1
+            #print arr[i], "in correct spot", i
         else:
-            tmp = arr[arr[i]-1]
-            arr[arr[i]-1] = arr[i]
+            val = int(arr[i])-1
+            tmp = arr[val]
+            arr[val] = arr[i]
             arr[i] = tmp
-
             swaps +=1
+            #print "Swap", arr[val], arr[i]
         #print arr
 
 
     return swaps
 
 if __name__ == '__main__':
-    #fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
-    n = 7
+    arr = []
+    fptr = open("C:\Users\Jackson\Desktop\ComputerScienceProjects\Prep\HackerRank\input07.txt", "r")
 
-    arr = [7, 1, 3, 5, 2, 4, 6, 8]
+
+
+    for line in fptr:
+        for word in line.split():
+            arr.append(word)
+
+
+
+    print len(arr)
 
     res = minimumSwaps(arr)
     print res
