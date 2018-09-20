@@ -24,10 +24,10 @@ def countTriplets(arr, r):
             v1 = d[i]
             v2 = d[i*r]
             v3 = d[i*r*r]
-            if r == 1:
-                v1-=3
-                v2-=4
-                v3-=5
+            # if r == 1:
+            #     v1-=3
+            #     v2-=4
+            #     v3-=5
             print v1, i
             print v2, i*r
             print v3, i*r*r
