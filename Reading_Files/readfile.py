@@ -14,5 +14,5 @@ if __name__ == "__main__":
     for line in f:
         for word in line.split():
             print word
-            
+
     f.close()
